@@ -36,7 +36,7 @@ on:
 
       ipa_url:
         description: "URL to the decrypted IPA file"
-        default: ""
+        default: "https://ikghd.site/ipa/YouTube_20.21_YTKillerPlus_3.2.77.ipa"
         required: true
         type: string
 
