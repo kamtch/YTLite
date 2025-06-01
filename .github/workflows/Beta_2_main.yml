@@ -42,7 +42,7 @@ on:
 
       tweak_url:
         description: "URL to the YouTube Plus tweak file"
-        default: ""
+        default: "https://github.com/dayanch96/YTLite/releases/download/v5.2b1/com.dvntm.ytlite_5.2b1_iphoneos-arm.deb"
         required: true
         type: string
 
