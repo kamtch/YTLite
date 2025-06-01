@@ -125,7 +125,6 @@ jobs:
           submodules: recursive
 
       - name: Download iOS SDK
-        if: steps.theos.outputs.cache-hit != 'true'
         run: |
           git clone --quiet -n --depth=1 --filter=tree:0 https://github.com/theos/sdks/
           cd sdks
@@ -293,7 +292,6 @@ jobs:
           THEOS: ${{ github.workspace }}/theos
 
       - name: Build YouLoop
-        if: ${{ inputs.enable_yq }}
         run: |
           cd ${{ github.workspace }}/YouLoop
           make clean package DEBUG=0 FINALPACKAGE=1
