@@ -28,6 +28,12 @@ on:
         required: true
         default: true
 
+      enable_ytlo:
+        description: "Integrate YouLoop"
+        type: boolean
+        required: true
+        default: true
+
       enable_demc:
         description: "Integrate DontEatMyContent"
         type: boolean
@@ -182,16 +188,10 @@ jobs:
           THEOS: ${{ github.workspace }}/theos
 
       - name: Clone YouLoop
+        if: ${{ inputs.enable_ytlo }}        
         run: |
-          if [ -d "$THEOS/include/YouLoop" ]; then
-            echo "PSHeader exists. Pulling latest changes..."
-            cd $THEOS/include/YouLoop
-            git pull
-          else
-            echo "YouLoop does not exist. Cloning repository..."
             cd $THEOS/include
             git clone --quiet --depth=1 https://github.com/kamtch/YouLoop.git
-          fi
         env:
           THEOS: ${{ github.workspace }}/theos
 
