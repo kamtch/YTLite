@@ -8,7 +8,7 @@ on:
         description: "Integrate YouPiP"
         type: boolean
         required: true
-        default: true
+        default: false
 
       enable_ytuhd:
         description: "Integrate YTUHD"
@@ -38,7 +38,7 @@ on:
         description: "Integrate DontEatMyContent"
         type: boolean
         required: true
-        default: true
+        default: false
 
       ipa_url:
         description: "URL to the decrypted IPA file"
@@ -48,8 +48,7 @@ on:
 
       tweak_url:
         description: "URL to the YouTube Plus tweak file"
-        default: "https://github.com/dayanch96/YTLite/releases/download/v5.2b1/com.dvntm.ytlite_5.2b1_iphoneos-arm.deb"
-        required: true
+        default: "https://github.com/dayanch96/YTLite/releases/download/v5.2b2/com.dvntm.ytlite_5.2b2_iphoneos-arm64e.deb"
         type: string
 
       display_name:
